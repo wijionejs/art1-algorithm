@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-5 flex justify-center flex-col items-center">
+    <div>
+      <h1 class="font-bold text-3xl mb-5 text-center">ART1 algorithm</h1>
+      <div class="mb-10 justify-center">
+        <p class="mb-3 text-center text-lg">
+          Choose the movies that you've already seen and we will find a
+          recommendation for you!
+        </p>
+        <div class="mb-3" id="checkboxes"></div>
+        <button
+          class="rounded bg-orange-600 text-white py-2 px-10 hover:opacity-80 active:opacity-60 active:scale-95 transition-all"
+          id="get-btn"
+        >
+          Find a movie
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="fixed inset-0 bg-black/25 flex items-center justify-center hidden"
+      id="recommendation-modal"
+    >
+      <div class="bg-white rounded p-5">
+        <p class="mb-3 text-center">Recommended movie is:</p>
+        <p
+          class="font-bold text-xl text-center mb-5"
+          id="recommendation-element"
+        ></p>
+
+        <button
+          class="rounded bg-orange-600 text-white py-2 px-10 hover:opacity-80 active:opacity-60 active:scale-95 transition-all mx-auto block"
+          id="thanks-btn"
+        >
+          Thanks!
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="fixed inset-0 bg-black/25 flex items-center justify-center hidden"
+      id="sorry-modal"
+    >
+      <div class="bg-white rounded p-5">
+        <p class="mb-3 text-center">
+          Sorry! We haven't found a movie for you :(
+        </p>
+
+        <button
+          class="rounded bg-orange-600 text-white py-2 px-10 hover:opacity-80 active:opacity-60 active:scale-95 transition-all mx-auto block"
+          id="close-btn"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
