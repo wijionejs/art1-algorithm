@@ -21,7 +21,7 @@ export default {
     "Se7en",
     "Interstellar"
   ],
-  vigilance: 0.8, // p parameter
+  vigilance: 0.6, // p parameter
   similarity: 1 // b parameter
 }
 

@@ -3,7 +3,7 @@ import config from "./config.js";
 
 const initialVectors = [];
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 1000; i++) {
   const vector = [];
   for (let j = 0; j < config.items.length; j++) {
     vector.push(Math.round(Math.random()));
