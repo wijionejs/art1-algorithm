@@ -1,22 +1,13 @@
 import Cluster from "./Cluster.js";
 import config from "./config.js";
-
-const initialVectors = [];
-
-for (let i = 0; i < 1000; i++) {
-  const vector = [];
-  for (let j = 0; j < config.items.length; j++) {
-    vector.push(Math.round(Math.random()));
-  }
-  initialVectors.push(vector);
-}
+import initialData from "./data.js";
 
 export default class ART1 {
   #clusters = [];
   #vectorLength = config.items.length; // d parameter
 
   constructor() {
-    for (const vector of initialVectors) {
+    for (const vector of initialData) {
       this.clusterizeFeatureVector(vector)
     }
   }
